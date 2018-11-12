@@ -16,8 +16,8 @@
       <div class="from-group"> 
             <label for="">Numero de Prendas</label>
             <input type="number" id="noprenda" min="1" max="10"  name="noprenda" class="form-control" placeholder="No.de prendas">
-        </div>
-        <div>
+        </div><br>
+        <div class="from-group">
           <label for="prenda">Tipo de prendas</label>
           <select id="prenda" name="prenda">
           <option></option>
@@ -26,10 +26,16 @@
           <option value="Mezclilla">Mezclilla</option>
           </select>
         </div><br>
-        <div>
+        <div class="from-group">
           <label for="">Fecha para Entregar Ropa</label><br>
           <input id="fecha_id" type="date" name="fecha" min="<?php echo date("Y-m-d");?>" placeholder="fecha">
         </div><br>
+        <div class="from-group">
+          <label for="">Hora de entrega</label>
+          <input type="time" name="hora" id="hora_id" min="09:00" max="20:00" required>
+          <span class="validity"></span>
+        </div><br>
+
 
       
     </div><br>

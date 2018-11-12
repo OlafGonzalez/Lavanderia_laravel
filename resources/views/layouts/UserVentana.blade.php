@@ -53,6 +53,7 @@ function valida(f) {
   }
 
 
+
   if(ok == false)
     alert(msg);
   return ok;
@@ -70,7 +71,6 @@ function valida(f) {
 			<a href="{{url('Usuario/pedidosPendientes')}}" class="navbar-brand">Pedidos pendientes</a>
 			<a href="{{url('Usuario/pedidosEntregados')}}" class="navbar-brand">Pedidos entregados</a>
 			<a href="" class="navbar-brand"> {{Auth::user()->name}}</a>
-			
 
 	</nav>
 				<div class="container">

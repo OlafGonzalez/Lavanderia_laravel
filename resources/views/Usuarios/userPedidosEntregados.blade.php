@@ -14,6 +14,8 @@
 				<th>ID</th>
 				<th>No.de Prendas</th>
 				<th>Costo</th>
+				<th>Fecha de Entrega</th>
+				<th>Hora de entrega</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -24,6 +26,8 @@
 				<td>{{$pedido['id']}}</td>
 				<td>{{$pedido['numeroprenda']}}</td>
 				<td>{{$pedido['Costo']}}</td>
+				<td>{{$pedido['fecha_entragado']}}</td>
+				<td>{{$pedido['hora_pListo']}}</td>
 			</tr>
 			@endif
 			@endforeach	

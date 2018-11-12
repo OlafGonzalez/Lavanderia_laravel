@@ -5,7 +5,23 @@
 <head>
 	<meta charset="utf-8">
 	<title>Admin - </title>
-	
+	<style type="text/css">
+		#my_table {
+    border-radius: 20px;
+    background-color: transparent;
+    color: black;
+    width: 500px;
+    text-align: center;
+}
+#div1 {
+     overflow:scroll;
+     height:400px;
+    
+}
+#div1 table {
+    
+}
+	</style>
 </head>
 <body>	
 

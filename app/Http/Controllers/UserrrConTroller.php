@@ -50,12 +50,13 @@ class UserrrConTroller extends Controller
         $pedido -> fecha_recibido = $request->input('fecha');
         $pedido -> fecha_entragado = null;
         $pedido -> Tipo_prenda = $request->input('prenda');
+        $pedido -> hora_entrega = $request->input('hora');
         $pedido -> Estado = 'Espera';
         $pedido -> Costo = null;
 
         $pedido ->save();
 
-        return 'Guardado';
+        return redirect('/Usuario/pedidosPendientes');
 
     }
 

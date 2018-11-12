@@ -22,6 +22,8 @@ class CreateHistorialPsTable extends Migration
             $table->enum('Estado', ['Espera', 'Listo']);
             $table->enum('Tipo_prenda',['Seda','Algodon','Mezclilla']);
             $table->date('fecha_recibido')->nullable();
+            $table->time('hora_entrega');
+            $table->time('hora_pListo')->nullable();
             $table->date('fecha_entragado')->nullable();
             $table->float('Costo',5,2)->nullable();
             $table->timestamps();

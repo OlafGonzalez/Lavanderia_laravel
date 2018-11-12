@@ -7,13 +7,14 @@
 	<h1>Pedidos Pendientes</h1>
 </div><br>
 
-<div class="">
-	<table align="center" class="table table-bordered">
+<div id="div1" class="">
+	<table align="center" class="table table-borderless">
 		<thead>
 			<tr>
 				<th>ID</th>
 				<th>Nombre del cliente</th>
 				<th>Fecha programada de entrega</th>
+				<th>Hora de entrega</th>
 				<th>No.de Prendas</th>
 				<th>Tipo de Prenda</th>
 				<th>Estado</th>
@@ -33,6 +34,7 @@
 				@endforeach
 				
 				<td>{{$pedido['fecha_recibido']}}</td>
+				<td>{{$pedido['hora_entrega']}}</td>
 				<td>{{$pedido['numeroprenda']}}</td>
 				<td>{{$pedido['Tipo_prenda']}}</td>
 				<td>{{$pedido['Estado']}}</td>
@@ -52,6 +54,7 @@
 	            	 <input name="_method" type="hidden" value="PATCH">
 	            	<input type="hidden" name="estado" value="Listo">
 	            	<input type="hidden" name="fecha" value="<?php echo date("Y-m-d");?>">
+	            	<input type="hidden" name="hora" value="<?php echo date("H:i:s");?>">
 
 	            	<button class="btn btn-success" type="submit">Listo</button>
           			</form>

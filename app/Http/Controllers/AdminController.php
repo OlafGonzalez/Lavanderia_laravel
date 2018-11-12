@@ -77,6 +77,7 @@ class AdminController extends Controller
     {
             $pedido = HistorialP::find($id);
             $pedido->fecha_entragado=$request->input('fecha');
+            $pedido->hora_pListo=$request->input('hora');
             $pedido->Estado=$request->input('estado'); 
             $pedido->save();
             return redirect('admin');

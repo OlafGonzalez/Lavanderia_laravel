@@ -26,6 +26,7 @@
 				<td>{{$pedido['numeroprenda']}}</td>
 				<td>{{$pedido['Estado']}}</td>
 				<td>{{$pedido['Costo']}}</td>
+				
 			</tr>	
 			@endif
 			@endforeach
