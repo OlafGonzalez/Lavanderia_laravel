@@ -59,7 +59,7 @@ function valida(f) {
   return ok;
 }
 	</script>
-
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
 </head>
 <body>	
@@ -70,7 +70,22 @@ function valida(f) {
 			<a href="{{url('Usuario/nuevo')}}" class="navbar-brand">Nuevo pedido</a>
 			<a href="{{url('Usuario/pedidosPendientes')}}" class="navbar-brand">Pedidos pendientes</a>
 			<a href="{{url('Usuario/pedidosEntregados')}}" class="navbar-brand">Pedidos entregados</a>
-			<a href="" class="navbar-brand"> {{Auth::user()->name}}</a>
+            <a id="navbarDropdown" class="nav-link dropdown-toggle navbar-brand" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Cerrar Sesión') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                    
 
 	</nav>
 				<div class="container">

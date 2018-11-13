@@ -7,7 +7,7 @@
 	<h1>Pedidos Entregados</h1>
 </div><br>
 
-<div class="from-group">
+<div id="div1" class="from-group">
 	<table class="table table_striped">
 		<thead>
 			<tr>
