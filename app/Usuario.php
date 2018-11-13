@@ -1,6 +1,6 @@
 <?php
 
-namespace Lavanderia;
+namespace Laravel;
 
 use Illuminate\Database\Eloquent\Model;
 

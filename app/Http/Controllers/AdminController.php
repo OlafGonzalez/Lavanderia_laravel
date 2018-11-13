@@ -1,10 +1,10 @@
 <?php
 
-namespace Lavanderia\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Lavanderia\HistorialP;
-use Lavanderia\User;
+use Laravel\HistorialP;
+use Laravel\User;
 
 class AdminController extends Controller
 {
@@ -13,8 +13,9 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $request->user()->authorizeRoles('admin');
         $usuarios = User::all();
         $pedidos = HistorialP::all();
         return view('Admin.admin',compact('pedidos','usuarios'));

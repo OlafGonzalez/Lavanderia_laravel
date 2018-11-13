@@ -1,11 +1,12 @@
 <?php
 
-namespace Lavanderia\Http\Controllers\Auth;
+namespace Laravel\Http\Controllers\Auth;
 
-use Lavanderia\User;
-use Lavanderia\Http\Controllers\Controller;
+use Laravel\User;
+use Laravel\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Laravel\Role;
 
 class RegisterController extends Controller
 {
@@ -58,14 +59,18 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Lavanderia\User
+     * @return \Laravel\User
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        $user = User::create([
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'password' => bcrypt($data['password']),
+    ]);
+    $user
+        ->roles()
+        ->attach(Role::where('name', 'user')->first());
+        return $user;
     }
 }

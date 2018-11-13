@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        Lavanderia\Providers\AppServiceProvider::class,
-        Lavanderia\Providers\AuthServiceProvider::class,
-        // Lavanderia\Providers\BroadcastServiceProvider::class,
-        Lavanderia\Providers\EventServiceProvider::class,
-        Lavanderia\Providers\RouteServiceProvider::class,
+        Laravel\Providers\AppServiceProvider::class,
+        Laravel\Providers\AuthServiceProvider::class,
+        // Laravel\Providers\BroadcastServiceProvider::class,
+        Laravel\Providers\EventServiceProvider::class,
+        Laravel\Providers\RouteServiceProvider::class,
 
     ],
 

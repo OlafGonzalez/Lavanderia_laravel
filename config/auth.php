@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Lavanderia\User::class,
+            'model' => Laravel\User::class,
         ],
 
         // 'users' => [

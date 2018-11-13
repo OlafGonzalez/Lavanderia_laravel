@@ -1,6 +1,6 @@
 <?php
 
-namespace Lavanderia\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lavanderia\Http\Middleware;
+namespace Laravel\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Lavanderia\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -21,8 +21,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $request->user()->authorizeRoles(['user', 'admin']);
         return view('home');
     }
+    
 }

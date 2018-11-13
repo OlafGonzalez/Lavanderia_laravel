@@ -1,7 +1,7 @@
 <?php
 
-namespace Lavanderia\Http\Controllers;
-use Lavanderia\User;
+namespace Laravel\Http\Controllers;
+use Laravel\User;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller

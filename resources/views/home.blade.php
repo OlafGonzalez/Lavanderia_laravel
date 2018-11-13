@@ -8,13 +8,25 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    Ya te haz registrado!!
-                    
+                  @if(Auth::user()->hasRole('admin'))
+                 <div>Acceso como administrador</div>
+                 <form action="admin">
+                      <button type="submit" class="btn btn-success btn-lg btn-block">Acceder</button>
+                  </div>
+
+                  </form>
+                 @else
+                 <div align="center">
+
+                  <div><h1>Acceso de usuario</h1></div>
+                                        
+                  <form action="/Usuario/nuevo">
+                      <button type="submit" class="btn btn-success btn-lg btn-block">Acceder</button>
+                  </div>
+
+                  </form>
+                  @endif
+
                     
                 </div>
             </div>

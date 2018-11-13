@@ -1,10 +1,10 @@
 <?php
 
-namespace Lavanderia\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Lavanderia\HistorialP;
-use Lavanderia\User;
+use Laravel\HistorialP;
+use Laravel\User;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -15,10 +15,12 @@ class UserrrConTroller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        
-        return view('Usuarios.user');
+        $request->user()->authorizeRoles('user');
+            return view('Usuarios.user');
+       
+
     }
 
     /**

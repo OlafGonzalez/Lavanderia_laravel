@@ -1,9 +1,9 @@
 <?php
 
-namespace Lavanderia\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Lavanderia\HistorialP;
+use Laravel\HistorialP;
 
 class PedidosEController extends Controller
 {

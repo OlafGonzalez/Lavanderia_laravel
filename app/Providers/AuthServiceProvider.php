@@ -1,6 +1,6 @@
 <?php
 
-namespace Lavanderia\Providers;
+namespace Laravel\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Lavanderia\Model' => 'Lavanderia\Policies\ModelPolicy',
+        'Laravel\Model' => 'Laravel\Policies\ModelPolicy',
     ];
 
     /**

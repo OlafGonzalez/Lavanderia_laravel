@@ -23,7 +23,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "Lavanderia\\": "app/"
+            "Laravel\\": "app/"
         }
     },
     "autoload-dev": {

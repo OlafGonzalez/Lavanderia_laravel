@@ -1,6 +1,6 @@
 <?php
 
-namespace Lavanderia\Console;
+namespace Laravel\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

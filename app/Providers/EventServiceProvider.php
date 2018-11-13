@@ -1,6 +1,6 @@
 <?php
 
-namespace Lavanderia\Providers;
+namespace Laravel\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Lavanderia\Events\Event' => [
-            'Lavanderia\Listeners\EventListener',
+        'Laravel\Events\Event' => [
+            'Laravel\Listeners\EventListener',
         ],
     ];
 

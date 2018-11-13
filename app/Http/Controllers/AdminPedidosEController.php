@@ -1,10 +1,10 @@
 <?php
 
-namespace Lavanderia\Http\Controllers;
+namespace Laravel\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Lavanderia\HistorialP;
-use Lavanderia\User;
+use Laravel\HistorialP;
+use Laravel\User;
 use Illuminate\Support\Facades\DB;
 
 class AdminPedidosEController extends Controller
