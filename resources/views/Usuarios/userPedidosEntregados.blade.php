@@ -11,7 +11,7 @@
 	<table class="table table_striped">
 		<thead>
 			<tr>
-				<th>ID</th>
+				<th>No.pedido</th>
 				<th>No.de Prendas</th>
 				<th>Costo</th>
 				<th>Fecha de Entrega</th>

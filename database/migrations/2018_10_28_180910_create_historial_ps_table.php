@@ -19,7 +19,7 @@ class CreateHistorialPsTable extends Migration
             $table->unsignedInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('users');
             $table->unsignedInteger('numeroprenda');
-            $table->enum('Estado', ['Espera', 'Listo']);
+            $table->enum('Estado', ['Entregado','Lavando', 'Listo','Espera','Para Entregar']);
             $table->enum('Tipo_prenda',['Seda','Algodon','Mezclilla']);
             $table->date('fecha_recibido')->nullable();
             $table->time('hora_entrega');

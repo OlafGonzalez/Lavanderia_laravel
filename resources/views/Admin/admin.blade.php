@@ -24,7 +24,7 @@
 		</thead>
 		<tbody>
 		@foreach($pedidos as $pedido)
-		@if($pedido->Estado == 'Espera')
+		@if($pedido->Estado == 'Lavando' or $pedido->Estado == 'Espera' or $pedido->Estado == 'Entregado' or $pedido->Estado == 'Para Entregar' )
 			<tr>
 				<td>{{$pedido['id']}}</td>
 				@foreach($usuarios as $usuario)
@@ -47,6 +47,7 @@
 	            	<button class="btn btn-danger" type="submit">Eliminar</button>
           			</form>
         		</td>
+        		@if($pedido->Estado == 'Lavando' or $pedido->Estado == 'Para Entregar' )
         		<td>
         			<!----Boton para poner un pedido como completado ---->
 					<form action="{{action('AdminController@update', $pedido['id'])}}" method="POST">
@@ -59,6 +60,7 @@
 	            	<button class="btn btn-success" type="submit">Listo</button>
           			</form>
         		</td>
+        		@endif
 			</tr>
 
 			@endif

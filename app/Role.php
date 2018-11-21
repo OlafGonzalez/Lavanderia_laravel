@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel;
+namespace Lavanderia;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,7 +9,7 @@ class Role extends Model
     public function users()
 {
     return $this
-        ->belongsToMany('Laravel\User')
+        ->belongsToMany('Lavanderia\User')
         ->withTimestamps();
 }
 }

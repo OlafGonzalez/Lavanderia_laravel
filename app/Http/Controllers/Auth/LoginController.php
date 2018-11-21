@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravel\Http\Controllers\Auth;
+namespace Lavanderia\Http\Controllers\Auth;
 
-use Laravel\Http\Controllers\Controller;
+use Lavanderia\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

@@ -1,7 +1,7 @@
 <?php
 
-namespace Laravel\Http\Controllers;
-use Laravel\User;
+namespace Lavanderia\Http\Controllers;
+use Lavanderia\User;
 use Illuminate\Http\Request;
 
 class ClientesController extends Controller

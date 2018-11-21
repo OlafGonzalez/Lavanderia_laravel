@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Exceptions;
+namespace Lavanderia\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

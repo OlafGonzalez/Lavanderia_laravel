@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravel\Http\Controllers;
+namespace Lavanderia\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laravel\HistorialP;
-use Laravel\User;
+use Lavanderia\HistorialP;
+use Lavanderia\User;
 
 class AdminController extends Controller
 {

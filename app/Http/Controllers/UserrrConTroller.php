@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravel\Http\Controllers;
+namespace Lavanderia\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laravel\HistorialP;
-use Laravel\User;
+use Lavanderia\HistorialP;
+use Lavanderia\User;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -43,6 +43,7 @@ class UserrrConTroller extends Controller
      */
     public function store(Request $request)
     {
+         $request->user()->authorizeRoles('user');
         
         $pedido = new HistorialP;
         $user = Auth::user();

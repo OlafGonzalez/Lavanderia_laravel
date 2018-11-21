@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravel\Http\Controllers;
+namespace Lavanderia\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laravel\HistorialP;
-use Laravel\User;
+use Lavanderia\HistorialP;
+use Lavanderia\User;
 use Illuminate\Support\Facades\DB;
 
 class AdminPedidosEController extends Controller
@@ -14,11 +14,13 @@ class AdminPedidosEController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+         $request->user()->authorizeRoles('admin');
+        $usuarios = User::all();
         $pedidos = HistorialP::all();
 
-        return view('Admin.PedidosEntregados',compact('pedidos'));
+        return view('Admin.PedidosEntregados',compact('pedidos','usuarios'));
     }
 
     /**
@@ -77,6 +79,7 @@ class AdminPedidosEController extends Controller
         $pedido = HistorialP::find($id);
         $pedido->Costo=$request->get('Costo'); 
         $pedido->Tipo_prenda=$request->get('prenda');
+        $pedido->Estado=$request->get('status');
         $pedido->save();
 
         return redirect('admin');

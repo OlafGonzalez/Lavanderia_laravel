@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravel\Http\Controllers;
+namespace Lavanderia\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laravel\HistorialP;
+use Lavanderia\HistorialP;
 
 class PedidosEController extends Controller
 {
@@ -12,8 +12,9 @@ class PedidosEController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+         $request->user()->authorizeRoles('user');
         $pedidos = HistorialP::all();
 
         return view('Usuarios.userPedidosEntregados',compact('pedidos'));

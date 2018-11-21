@@ -1,7 +1,7 @@
 <?php
 
-namespace Laravel\Http\Controllers;
-use Laravel\User;
+namespace Lavanderia\Http\Controllers;
+use Lavanderia\User;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -37,7 +37,9 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
          /**Variable usuario*/
-       $usuario = new User();
+
+
+        $usuario = new User();
 
         $usuario -> name = $request->input('name');
         $usuario -> numero = $request->input('numero');

@@ -7,9 +7,9 @@
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
+                <div align="center">
                   @if(Auth::user()->hasRole('admin'))
-                 <div>Acceso como administrador</div>
+                 <div><h1>Acceso como administrador</h1></div>
                  <form action="admin">
                       <button type="submit" class="btn btn-success btn-lg btn-block">Acceder</button>
                   </div>

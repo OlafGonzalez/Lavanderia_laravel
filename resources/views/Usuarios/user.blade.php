@@ -1,16 +1,11 @@
 @extends('layouts.UserVentana')
-
-
 @section('content')
-
 <div align="center">
 	<h1>Nuevo pedido</h1><br>
-
 </div>
 <div align="center">
 	<form id="formulario" name="test" class="from-group" method="POST" onsubmit="return valida(this)" action="\nuevo">
-    <p>
-      
+    <p>   
     @csrf
     <div class="from-group col-md-2" align="center">
       <div class="from-group"> 
@@ -35,16 +30,11 @@
           <input type="time" name="hora" id="hora_id" min="09:00" max="20:00" required>
           <span class="validity"></span>
         </div><br>
-
-
-      
     </div><br>
     <div class="from-group">
-      
   <button type="submit" class="btn btn-primary">Guardar</button>
   </div>
     </p>
   </form>
 </div>
-
 @endsection

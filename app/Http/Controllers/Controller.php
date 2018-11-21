@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Http\Controllers;
+namespace Lavanderia\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

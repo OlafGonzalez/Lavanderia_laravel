@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravel\Http\Controllers;
+namespace Lavanderia\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Laravel\HistorialP;
+use Lavanderia\HistorialP;
 
 class PedidosController extends Controller
 {
@@ -12,8 +12,9 @@ class PedidosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+         $request->user()->authorizeRoles('user');
         $pedidos = HistorialP::all();
         return view ('Usuarios.userPedidos',compact('pedidos'));
     }
@@ -81,6 +82,9 @@ class PedidosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pedido = HistorialP::find($id);
+
+        $pedido->delete();
+        return redirect('/Usuario/pedidosPendientes')->with('Satisfactorio','Pedido eliminado');
     }
 }

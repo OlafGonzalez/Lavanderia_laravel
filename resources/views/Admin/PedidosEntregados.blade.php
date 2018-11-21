@@ -11,10 +11,12 @@
 	<table class="table table_striped">
 		<thead>
 			<tr>
-				<th>ID</th>
+				<th>No. de Pedido</th>
 				<th>No.de Prendas</th>
-				<th>Estado</th>
+				<th>Usuario</th>
 				<th>Costo</th>
+				<th>Fecha de entrega</th>
+				<th>Hora de entrega</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -24,8 +26,14 @@
 			<tr>
 				<td>{{$pedido['id']}}</td>
 				<td>{{$pedido['numeroprenda']}}</td>
-				<td>{{$pedido['Estado']}}</td>
+				@foreach($usuarios as $usuario)
+				@if($usuario->id == $pedido->cliente_id)
+				<td>{{$usuario['name']}}</td>
+				@endif
+				@endforeach
 				<td>{{$pedido['Costo']}}</td>
+				<td>{{$pedido['fecha_entragado']}}</td>
+				<td>{{$pedido['hora_pListo']}}</td>
 			</tr>
 			@endif
 			@endforeach

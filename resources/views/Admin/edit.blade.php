@@ -31,15 +31,21 @@
               </select>
             </div>
           </div>
-			<!----
+
+			
         <div class="row">
           <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-              <label for="number">Phone Number:</label>
-              <input type="text" class="form-control" name="number" value="">
+              <label for="estado">Estado</label>
+              <select name="status">
+                <option value="{{$pedido->Estado}}">{{$pedido->Estado}}</option>
+                <option value="Entregado">Entregado</option>
+                <option value="Lavando">Lavando</option>
+                <option value="Para Entregar">Para Entregar</option>
+              </select>
             </div>
           </div>
-          ---->
+        
         <div class="row" align="center">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4" style="margin-top:60px">

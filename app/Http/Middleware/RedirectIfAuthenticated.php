@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Http\Middleware;
+namespace Lavanderia\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

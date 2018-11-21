@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Providers;
+namespace Lavanderia\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

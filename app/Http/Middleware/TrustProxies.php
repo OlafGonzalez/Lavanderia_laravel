@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Http\Middleware;
+namespace Lavanderia\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;

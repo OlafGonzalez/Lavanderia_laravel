@@ -42,14 +42,4 @@ Route::resource('/Usuario/pedidosEntregados','PedidosEController');
 Route::resource('admin','AdminController');
 
 Route::resource('adminPedidos1','AdminPedidosEController');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
